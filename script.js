@@ -196,15 +196,6 @@ const products = [
     kategori: "pancing-umpan",
     linkAffiliate: "https://s.shopee.co.id/1qcLKGwOZz"
   },
-     {
-    id: 3,
-    nama: "Essen Super Ikan NILA",
-    harga: "Rp120.000",
-    gambar: "assets/products/AGA-Essen -uper Ikan-NILA.jpg",
-    deskripsi: "Diformulasikan untuk target ikan nila .",
-    kategori: "pancing-umpan",
-    linkAffiliate: "https://s.shopee.co.id/5LCKobxOA1"
-  },
   {
     id: 3,
     nama: " Umpan Mancing Ikan Mas 30g",
