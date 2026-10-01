@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaAgri.id — Belanja Kebutuhan Perikanan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" id="brandLogo">
+        <span class="brand-mark">🐟</span>
+        <span class="brand-name">aquaagri<span class="brand-dot">.id</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HALAMAN UTAMA -->
+    <section id="homeView" class="view">
+      <section class="hero">
+        <h1>Belanja Kebutuhan Perikanan</h1>
+        <p>Temukan berbagai produk pilihan untuk kebutuhan ikan, pancing, dan budidaya.</p>
+      </section>
+
+      <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Cari produk, misalnya: pelet, kail, indukan..." aria-label="Cari produk">
+      </section>
+
+      <section class="categories">
+        <h2 class="section-title">Kategori Produk</h2>
+        <div class="category-grid" id="categoryGrid">
+          <!-- category cards di-render lewat JS -->
+        </div>
+      </section>
+    </section>
+
+    <!-- HALAMAN KATEGORI / HASIL -->
+    <section id="categoryView" class="view hidden">
+      <div class="category-header">
+        <button id="backBtn" class="back-btn" type="button">
+          <span aria-hidden="true">←</span> Kembali
+        </button>
+        <h2 id="categoryTitle">Semua Produk</h2>
+      </div>
+
+      <section class="filter-bar">
+        <input type="text" id="searchInputCategory" placeholder="Cari produk..." aria-label="Cari produk">
+        <select id="filterSelect" aria-label="Filter kategori">
+          <option value="semua">Semua Produk</option>
+          <option value="produk-olahan-ikan">Produk Olahan Ikan</option>
+          <option value="ikan-seafood-segar">Ikan & Seafood Segar</option>
+          <option value="pancing-umpan">Pancing & Umpan</option>
+          <option value="Benih-Pakan-Budidaya">Benih,Pakan & Budidaya</option>
+        </select>
+      </section>
+
+      <div class="product-grid" id="productGrid">
+        <!-- product cards di-render lewat JS -->
+      </div>
+
+      <p class="empty-state hidden" id="emptyState">
+        Produk tidak ditemukan. Coba kata kunci atau kategori lain ya.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 aquaagri.id — Katalog produk perikanan pilihan.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

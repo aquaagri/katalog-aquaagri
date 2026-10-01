@@ -1,0 +1,336 @@
+/* ==========================================================
+   AquaAgri.id — Style Katalog Affiliate
+   ========================================================== */
+
+:root {
+  --hijau: #1f8a5f;
+  --hijau-gelap: #146b48;
+  --biru: #1a6fa8;
+  --biru-muda: #e8f4fb;
+  --putih: #ffffff;
+  --abu-terang: #f6f9f8;
+  --abu-teks: #55625d;
+  --gelap: #0f2a22;
+  --border: #e1ebe6;
+  --radius: 16px;
+  --shadow: 0 4px 16px rgba(15, 42, 34, 0.08);
+  --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--putih);
+  color: var(--gelap);
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Topbar ---------- */
+
+.topbar {
+  background: var(--putih);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.brand-mark {
+  font-size: 1.4rem;
+}
+
+.brand-name {
+  color: var(--hijau-gelap);
+}
+
+.brand-dot {
+  color: var(--biru);
+}
+
+/* ---------- Layout umum ---------- */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin: 0 0 14px;
+  color: var(--gelap);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  text-align: center;
+  padding: 40px 8px 24px;
+}
+
+.hero h1 {
+  font-size: 1.9rem;
+  margin: 0 0 10px;
+  color: var(--hijau-gelap);
+}
+
+.hero p {
+  color: var(--abu-teks);
+  margin: 0 auto;
+  max-width: 460px;
+  font-size: 0.98rem;
+}
+
+/* ---------- Search bar (home) ---------- */
+
+.search-bar {
+  margin: 0 0 30px;
+}
+
+.search-bar input,
+.filter-bar input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--abu-terang);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.search-bar input:focus,
+.filter-bar input:focus {
+  border-color: var(--biru);
+  background: var(--putih);
+}
+
+/* ---------- Kategori (home) ---------- */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.category-card {
+  background: var(--biru-muda);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.category-card:hover,
+.category-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+
+.category-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.category-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--gelap);
+}
+
+/* ---------- Halaman kategori ---------- */
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0 16px;
+}
+
+.back-btn {
+  border: 1px solid var(--border);
+  background: var(--putih);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--gelap);
+}
+
+.back-btn:hover {
+  background: var(--abu-terang);
+}
+
+#categoryTitle {
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--hijau-gelap);
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.filter-bar input {
+  flex: 1;
+}
+
+.filter-bar select {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--abu-terang);
+  padding: 0 14px;
+  font-size: 0.9rem;
+  color: var(--gelap);
+}
+
+/* ---------- Grid produk ---------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.product-card {
+  background: var(--putih);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--abu-terang);
+}
+
+.product-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin: 0;
+  color: var(--gelap);
+}
+
+.product-desc {
+  font-size: 0.8rem;
+  color: var(--abu-teks);
+  margin: 0;
+  flex: 1;
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--hijau-gelap);
+  font-size: 0.95rem;
+}
+
+.product-btn {
+  margin-top: 6px;
+  border: none;
+  background: var(--hijau);
+  color: var(--putih);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.product-btn:hover {
+  background: var(--hijau-gelap);
+}
+
+/* ---------- Empty state ---------- */
+
+.empty-state {
+  text-align: center;
+  color: var(--abu-teks);
+  padding: 40px 10px;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  text-align: center;
+  padding: 20px 16px 30px;
+  color: var(--abu-teks);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 640px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
